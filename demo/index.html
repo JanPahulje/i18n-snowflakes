@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="i18n/i18snowflakes.js"></script>
+        <script>
+            $(document).ready(function(){
+                $.snowflakes("en");
+                $(".select_language").click(function(){
+                    $.snowflakes(this.id);
+                });
+            });
+        </script>
+    </head>
+    <div class="container">
+        <h1 translate="MainTitle"></h1>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" translate="PlaceHolder">
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a class="select_language" id="en" href="#">English</a></li>
+                <li><a class="select_language" id="fr" href="#">French</a></li>
+                <li><a class="select_language" id="es" href="#">Espanol</a></li>
+            </ul>
+        </div>
+        <h2 translate="Title"></h2>
+        <div translate="LoremIpsum"></div>
+    </div>
+</body>
+</html>
